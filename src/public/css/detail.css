@@ -1,0 +1,369 @@
+.header {
+    height: 10vh;
+    background-color: #f8f8f8;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 15px 15px;
+    max-width: 1230px;
+}
+
+.header__logo {
+    color: #0d33ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 34px;
+    cursor: pointer;
+}
+
+.header__logo::before {
+    content: url('/storage/icon.jpg');
+    margin-right: 10px;
+    vertical-align: middle;
+    max-height: 30px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.drawer-menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: 0.4s;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu-toggle:checked~.drawer-menu {
+    top: 0;
+}
+
+.drawer-menu .close-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 30px;
+    color: #0d33ff;
+    cursor: pointer;
+}
+
+.close-btn-wrapper {
+    background-color: #0d33ff;
+    width: 40px;
+    height: 40px;
+}
+
+.close-btn-content {
+    color: #ffffff;
+    text-align: center;
+    vertical-align: center;
+
+}
+
+.drawer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.drawer-menu ul li {
+    padding: 15px;
+
+}
+
+.drawer-menu ul li a {
+    text-decoration: none;
+    color: #0d33ff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header-nav__li-button {
+    text-decoration: none;
+    color: #0d33ff;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    background-color: #ffffff;
+}
+
+/* ここまでがヘッダー */
+
+.body {
+    background-color: #f8f8f8;
+}
+
+.detail__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail__content-restaurant {
+    width: 45%;
+}
+
+.restaurant__content-header {
+    display: flex;
+}
+
+.restaurant__img img {
+    width: 100%;
+}
+
+.back-button {
+    background-color: #ffffff;
+    color: #000;
+    margin-bottom: 10px;
+    border: none;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 0 10px;
+    box-shadow: 1px 1px 2px #000;
+}
+
+.restaurant__content-name {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.restaurant__content-tag {
+    font-size: 15px;
+    display: flex;
+    margin-top: 10px;
+}
+
+.restaurant__content-area {
+    margin-right: 5px;
+}
+
+.restaurant__content-description {
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.detail__content-reserve {
+    background-color: #3078f2;
+    width: 45%;
+    padding: 20px 15px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #000;
+}
+
+.reserve__content-header {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.reserve__content-date {
+    display: block;
+    width: 30%;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    padding: 3px 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#time-select {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    padding: 3px 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#person-select {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    padding: 3px 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.reserve__content-confirm {
+    background-color: #7baff4;
+    margin-top: 10px;
+    width: 95%;
+    border-radius: 5px;
+    padding: 20px 15px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.reserve__content-confirm-restaurant {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.reserve__content-confirm-restaurant-item {
+    width: 20%;
+}
+
+.reserve__content-confirm-reservation-item {
+    width: 20%;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.form__button {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.form__button-submit {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #0000ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ここからコメント関連 */
+
+.detail__comment {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.detail__comment-input {
+    background-color: #3078f2;
+    width: 50%;
+    padding: 20px 15px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #000;
+    margin: 0 auto;
+}
+
+.detail__comment-input-header {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.detail__comment-input-ttl {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.detail__comment-input-rate {
+    width: 30%;
+    color: #ffffff;
+}
+
+.detail__comment-input-review {
+    width: 30%;
+    color: #ffffff;
+}
+
+.detail__comment-input-rate-select {
+    width: 10%;
+    border: none;
+}
+
+.detail__comment-input-textarea {
+    width: 70%;
+    border: none;
+}
+
+.form__comment-button {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.form__comment-button-submit {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #0000ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.detail__comment-content {
+    background-color: #3078f2;
+    width: 50%;
+    padding: 20px 15px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #000;
+    margin: 40px auto 0;
+}
+
+.detail__comment-content-ttl {
+    display: flex;
+    margin-bottom: 20px;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+
+}
+
+.detail__comment-content-rate {
+    width: 20%;
+    text-align: center;
+}
+
+.detail__comment-content-review {
+    width: 80%;
+}
+
+/* ここからレスポンシブデザイン */
+
+@media screen and (max-width: 768px) {
+    .detail__content {
+        margin: 0 auto;
+        padding: 30px 15px;
+        max-width: 1230px;
+        display: block;
+    }
+
+    .detail__content-restaurant {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .detail__content-reserve {
+        background-color: #3078f2;
+        width: 80%;
+        padding: 20px 15px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 2px #000;
+        margin: 20px auto 0;
+    }
+
+    .reserve__content-confirm-restaurant-item {
+        width: 40%;
+    }
+
+    .reserve__content-confirm-reservation-item {
+        width: 40%;
+    }
+}

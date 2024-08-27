@@ -1,0 +1,344 @@
+.header {
+    height: 10vh;
+    background-color: #f8f8f8;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 15px 15px;
+    max-width: 1230px;
+}
+
+.header__logo {
+    color: #0d33ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 34px;
+    cursor: pointer;
+}
+
+.header__logo::before {
+    content: url('/storage/icon.jpg');
+    margin-right: 10px;
+    vertical-align: middle;
+    max-height: 30px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.drawer-menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: 0.4s;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu-toggle:checked~.drawer-menu {
+    top: 0;
+}
+
+.drawer-menu .close-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 30px;
+    color: #0d33ff;
+    cursor: pointer;
+}
+
+.close-btn-wrapper {
+    background-color: #0d33ff;
+    width: 40px;
+    height: 40px;
+}
+
+.close-btn-content {
+    color: #ffffff;
+    text-align: center;
+    vertical-align: center;
+
+}
+
+.drawer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.drawer-menu ul li {
+    padding: 15px;
+
+}
+
+.drawer-menu ul li a {
+    text-decoration: none;
+    color: #0d33ff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header-nav__li-button {
+    text-decoration: none;
+    color: #0d33ff;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    background-color: #ffffff;
+}
+
+/* ここまでがヘッダー */
+
+.body {
+    background-color: #f8f8f8;
+}
+
+.mypage__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.mypage__heading {
+    text-align: center;
+    color: #00001C;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mypage__content-ttl {
+    display: flex;
+}
+
+.mypage__content-reservation {
+    width: 45%;
+}
+
+.mypage__content-reservation-header {
+    color: #00001C;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.reserve__content-confirm {
+    background-color: #0d33ff;
+    margin-top: 20px;
+    width: 85%;
+    border-radius: 5px;
+    padding: 30px 30px;
+    color: #ffffff;
+    font-size: 14px;
+    box-shadow: 1px 1px 2px #000;
+}
+
+.reserve__content-confirm-restaurant {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.reserve__content-confirm-restaurant-ttl {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.reserve__content-confirm-reservation-number {
+    font-size: 15px;
+}
+
+.reserve__content-confirm-reservation-number::before {
+    content: url('/storage/watch.jpg');
+    margin-right: 30px;
+    vertical-align: middle;
+    max-height: 30px;
+}
+
+.form__button-submit {
+    border-radius: 150px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    background-color: #0d33ff;
+    font-weight: bold;
+    font-size: 18px;
+    vertical-align: center;
+}
+
+.reserve__content-confirm-restaurant-item {
+    width: 25%;
+}
+
+.reserve__content-confirm-reservation-item {
+    width: 25%;
+}
+
+.reserve__content-confirm-qrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reserve__content-confirm-qrcode-img {
+    width: 100px;
+    height: 100px;
+}
+
+.mypage__content-favorite {
+    width: 55%;
+}
+
+.form__button-edit {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.form__button-edit-submit {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #0000ff;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.reserve__content-confirm-checkout {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form__button-checkout {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #ffff00;
+    color: #000000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.mypage__content-favorite-ttl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.restaurant {
+    width: 40%;
+    box-shadow: 1px 1px 2px #000;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+.restaurant__img img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.restaurant__content {
+    padding: 15px;
+}
+
+.restaurant__content-name {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.restaurant__content-tag {
+    font-size: 12px;
+    display: flex;
+    font-weight: bold;
+}
+
+.restaurant__content-area {
+    margin-right: 2px;
+}
+
+.restaurant__content-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.restaurant__content-button-a {
+    background-color: #0d33ff;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.favorite-button {
+    background-color: #ffffff;
+    border: none;
+    font-size: 27px;
+}
+
+.favorite-icon-favorite {
+    color: #ff0000;
+}
+
+.favorite-icon-unfavorite {
+    color: #E6E7E8;
+}
+
+/* ここからレスポンシブデザイン */
+
+@media screen and (max-width: 768px) {
+    .mypage__content-ttl {
+        display: block;
+    }
+
+    .mypage__content-reservation {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .reserve__content-confirm {
+        background-color: #0d33ff;
+        width: 100%;
+        border-radius: 5px;
+        padding: 30px 30px;
+        color: #ffffff;
+        font-size: 14px;
+        box-shadow: 1px 1px 2px #000;
+        margin: 20px auto 0;
+    }
+
+    .reserve__content-confirm-restaurant-item {
+        width: 50%;
+    }
+
+    .reserve__content-confirm-reservation-item {
+        width: 50%;
+    }
+
+    .mypage__content-favorite {
+        width: 80%;
+        margin: 30px auto 0;
+    }
+
+    .mypage__content-favorite-ttl {
+        display: block;
+    }
+
+    .restaurant {
+        width: 80%;
+        box-shadow: 1px 1px 2px #000;
+        background-color: #ffffff;
+        border-radius: 5px;
+        margin: 20px auto 20px;
+    }
+}

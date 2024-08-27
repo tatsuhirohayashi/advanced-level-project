@@ -1,0 +1,271 @@
+.header {
+    height: 20vh;
+    background-color: #f8f8f8;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 15px 15px;
+    max-width: 1230px;
+}
+
+.header-utilities {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    color: #0d33ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 34px;
+    cursor: pointer;
+}
+
+.header__logo::before {
+    content: url('/storage/icon.jpg');
+    margin-right: 10px;
+    vertical-align: middle;
+    max-height: 30px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.drawer-menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: 0.4s;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu-toggle:checked~.drawer-menu {
+    top: 0;
+}
+
+.drawer-menu .close-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 30px;
+    color: #0d33ff;
+    cursor: pointer;
+}
+
+.close-btn-wrapper {
+    background-color: #0d33ff;
+    width: 40px;
+    height: 40px;
+}
+
+.close-btn-content {
+    color: #ffffff;
+    text-align: center;
+    vertical-align: center;
+
+}
+
+.drawer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.drawer-menu ul li {
+    padding: 15px;
+
+}
+
+.drawer-menu ul li a {
+    text-decoration: none;
+    color: #0d33ff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header-nav__li-button {
+    text-decoration: none;
+    color: #0d33ff;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    background-color: #ffffff;
+}
+
+/* 以下検索 */
+
+.search-form__item {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 1px 1px 2px #000;
+}
+
+.search-form__item-area {
+    height: 45px;
+    font-weight: bold;
+    font-size: 12px;
+    border: none;
+    padding: 5px 10px;
+}
+
+.search-form__item-genre {
+    height: 45px;
+    font-weight: bold;
+    font-size: 12px;
+    border: none;
+    padding: 5px 10px;
+}
+
+.search-form__item-keyword {
+    height: 45px;
+    font-weight: bold;
+    font-size: 12px;
+    border: none;
+    padding: 5px 200px 5px 10px;
+}
+
+/* ここまでがヘッダー */
+
+.index {
+    background-color: #f8f8f8;
+}
+
+.index__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.index__content-ttl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.restaurant {
+    width: 23%;
+    box-shadow: 1px 1px 2px #000;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-right: 12.015px;
+}
+
+.restaurant__img img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.restaurant__content {
+    padding: 15px;
+}
+
+.restaurant__content-name {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.restaurant__content-tag {
+    font-size: 12px;
+    display: flex;
+    font-weight: bold;
+}
+
+.restaurant__content-area {
+    margin-right: 2px;
+}
+
+.restaurant__content-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.restaurant__content-button-a {
+    background-color: #0d33ff;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.favorite-button {
+    background-color: #ffffff;
+    border: none;
+    font-size: 27px;
+}
+
+.favorite-icon-favorite {
+    color: #ff0000;
+}
+
+.favorite-icon-unfavorite {
+    color: #E6E7E8;
+}
+
+/* ここからレスポンシブデザイン */
+
+@media screen and (max-width: 768px) {
+    .header-utilities {
+        display: block;
+    }
+
+    .search-form__item {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: left;
+        width: 100%;
+        box-shadow: 1px 1px 2px #000;
+    }
+
+    .search-form__item-area {
+        height: 45px;
+        font-weight: bold;
+        font-size: 10px;
+        border: none;
+        padding: 5px 10px;
+        width: 25%;
+    }
+
+    .search-form__item-genre {
+        height: 45px;
+        font-weight: bold;
+        font-size: 10px;
+        border: none;
+        padding: 5px 10px;
+        width: 25%;
+    }
+
+    .search-form__item-keyword {
+        height: 45px;
+        font-weight: bold;
+        font-size: 10px;
+        border: none;
+        padding: 5px 20px 5px 10px;
+        width: 50%;
+    }
+
+    .index__content-ttl {
+        display: block;
+    }
+
+    .restaurant {
+        width: 80%;
+        box-shadow: 1px 1px 2px #000;
+        background-color: #ffffff;
+        border-radius: 5px;
+        margin: 0 auto 20px;
+    }
+}
