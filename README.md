@@ -88,6 +88,7 @@ Laravel環境構築
 4.php artisan key:generate<br>
 5.php artisan migrate<br>
 6.php artisan db:seed<br>
++αphp artisan storage:link（※必要に応じてコマンドを打ってください。）<br>
 
 ## URL
 
@@ -115,3 +116,7 @@ MailHog:http://localhost:8025/<br>
 
 メールアドレス：admin@admin1.com<br>
 パスワード：admin1<br>
+
+## 注意事項
+
+・storage/public/images、storage/public/qr_codesにある画像は必要に応じて削除してください。<br>
