@@ -1,0 +1,363 @@
+.header {
+    height: 10vh;
+    background-color: #f8f8f8;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 15px 15px;
+    max-width: 1230px;
+}
+
+.header__logo {
+    color: #0d33ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 34px;
+    cursor: pointer;
+}
+
+.header__logo::before {
+    content: url('/storage/icon.jpg');
+    margin-right: 10px;
+    vertical-align: middle;
+    max-height: 30px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.drawer-menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: 0.4s;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu-toggle:checked~.drawer-menu {
+    top: 0;
+}
+
+.drawer-menu .close-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 30px;
+    color: #0d33ff;
+    cursor: pointer;
+}
+
+.close-btn-wrapper {
+    background-color: #0d33ff;
+    width: 40px;
+    height: 40px;
+}
+
+.close-btn-content {
+    color: #ffffff;
+    text-align: center;
+    vertical-align: center;
+
+}
+
+.drawer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.drawer-menu ul li {
+    padding: 15px;
+
+}
+
+.drawer-menu ul li a {
+    text-decoration: none;
+    color: #0d33ff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header-nav__li-button {
+    text-decoration: none;
+    color: #0d33ff;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    background-color: #ffffff;
+}
+
+/* ここまでがヘッダー */
+
+.body {
+    background-color: #f8f8f8;
+}
+
+.review__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.review__content-restaurant {
+    width: 40%;
+    margin-top: 50px;
+    border-right: 2px solid #BDBDB7;
+}
+
+.review__content-restaurant-h2 {
+    font-size: 45px;
+    font-weight: lighter;
+    padding-right: 100px;
+}
+
+.restaurant {
+    width: 70%;
+    box-shadow: 1px 1px 2px #000;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.restaurant__img img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.restaurant__content {
+    padding: 15px;
+}
+
+.restaurant__content-name {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.restaurant__content-tag {
+    font-size: 12px;
+    display: flex;
+    font-weight: bold;
+}
+
+.restaurant__content-area {
+    margin-right: 2px;
+}
+
+.restaurant__content-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.restaurant__content-button-a {
+    background-color: #0d33ff;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.favorite-button {
+    background-color: #ffffff;
+    border: none;
+    font-size: 27px;
+}
+
+.favorite-icon-favorite {
+    color: #ff0000;
+}
+
+.favorite-icon-unfavorite {
+    color: #E6E7E8;
+}
+
+/* ここまでが口コミ投稿画面の左部分 */
+
+.review__content-review {
+    width: 60%;
+    padding-left: 100px;
+}
+
+.review__content-review-rate {
+    font-size: 32px;
+    font-weight: medium;
+}
+
+.review__content-review-rate-p {
+    margin: 0 0;
+}
+
+.rating {
+    display: flex;
+    font-size: 65px;
+    flex-direction: row-reverse;
+    width: max-content;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    color: #E6E7E8;
+}
+
+.rating input[type="radio"]:checked~label {
+    color: #0d33ff;
+}
+
+.review__content-review-text {
+    font-size: 32px;
+    font-weight: medium;
+}
+
+.review__content-review-text-p {
+    margin: 10px 0;
+}
+
+.review__content-review-text-textarea {
+    background-color: transparent;
+    border: 2px solid #BDBDB7;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 18px;
+}
+
+.review__content-review-text-textarea::placeholder {
+    color: #BDBDB7;
+    opacity: 1;
+    font-size: 18px;
+}
+
+.review__content-review-text-count {
+    font-size: 10px;
+    margin: 0 0;
+    text-align: right;
+}
+
+.review__content-review-img {
+    font-size: 32px;
+    font-weight: medium;
+}
+
+.file-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #BDBDB7;
+    padding: 20px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.custom-file-upload {
+    cursor: pointer;
+}
+
+.form__error {
+    height: 15px;
+    color: #ff0000;
+    text-align: left;
+    font-size: 15px;
+}
+
+/* ここまでが口コミ投稿画面の右部分 */
+
+.review__content-button {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+    display: flex;
+    justify-content: center;
+}
+
+.review__content-submit {
+    font-size: 20px;
+    width: 50%;
+    background-color: #ffffff;
+    border: none;
+    padding: 15px 10px;
+    border-radius: 50px;
+}
+
+@media screen and (max-width: 375px) {
+    .review__content {
+        margin: 0 auto;
+        padding: 30px 15px;
+        max-width: 1230px;
+        display: block;
+
+    }
+
+    .review__content-restaurant {
+        width: 80%;
+        margin: 50px auto 0;
+        border: none;
+    }
+
+    .review__content-restaurant-h2 {
+        font-size: 45px;
+        font-weight: lighter;
+        padding-right: 0;
+    }
+
+    .restaurant {
+        width: 80%;
+        box-shadow: 1px 1px 2px #000;
+        background-color: #ffffff;
+        border-radius: 5px;
+        margin: 0 auto;
+    }
+
+    .review__content-review {
+        width: 80%;
+        padding-left: 0;
+        margin: 40px auto 0;
+    }
+
+    .rating {
+        display: flex;
+        font-size: 48px;
+        flex-direction: row-reverse;
+        width: max-content;
+    }
+
+    .review__content-review-rate {
+        font-size: 24px;
+        font-weight: medium;
+    }
+
+    .review__content-review-text {
+        font-size: 24px;
+        font-weight: medium;
+    }
+
+    .review__content-review-img {
+        font-size: 24px;
+        font-weight: medium;
+    }
+
+    .review__content-submit {
+        font-size: 20px;
+        width: 80%;
+        background-color: #ffffff;
+        border: none;
+        padding: 15px 10px;
+        border-radius: 50px;
+    }
+}

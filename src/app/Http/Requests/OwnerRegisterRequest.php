@@ -50,4 +50,10 @@ class OwnerRegisterRequest extends FormRequest
             'password.max' => 'パスワードは60文字以内で入力してください',
         ];
     }
+
+    protected function failedValidation(\Illuminate\Contracts\Validation\Validator $validator)
+    {
+        throw (new \Illuminate\Validation\ValidationException($validator))
+            ->errorBag('register'); // ここでエラーバッグを 'register' に設定
+    }
 }

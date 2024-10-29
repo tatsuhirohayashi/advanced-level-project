@@ -22,6 +22,7 @@ use App\Http\Controllers\EmailVerificationNotificationController;
 Route::get('/', [ShopController::class, 'index']);
 Route::get('/detail/{id}', [ShopController::class, 'show'])->name('restaurants.show');
 Route::get('/search', [ShopController::class, 'search']);
+Route::get('/sort', [ShopController::class, 'sortBy']);
 
 // メール認証リマインダーページ
 Route::get('/email/verify', function () {
@@ -76,6 +77,11 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::post('/checkout/{id}', [ShopController::class, 'checkout'])->name('stripe.checkout');
     Route::get('/success', [ShopController::class, 'success'])->name('checkout.success');
     Route::get('/cancel', [ShopController::class, 'cancel'])->name('checkout.cancel');
+    Route::get('/review/{id}', [ShopController::class, 'showCreateForm'])->name('review.show');
+    Route::post('/review/{id}', [ShopController::class, 'postReview'])->name('review.store');
+    Route::delete('/review/delete/{id}', [ShopController::class, 'deleteReview'])->name('review.delete');
+    Route::get('/review/edit/{id}', [ShopController::class, 'showEditForm'])->name('review.edit');
+    Route::patch('/review/edit/{id}', [ShopController::class, 'updateReview'])->name('review.update');
 });
 
 
@@ -102,10 +108,13 @@ Route::post('/logout/owner', [AuthController::class, 'ownerLogout']);
 
 Route::middleware('auth')->group(function () {
     //管理者用店舗登録ページの表示
-    Route::get('/admin/shop-register', [ShopController::class, 'adminShowShopRegistrationForm']);
+    Route::get('/admin/shop-register', [ShopController::class, 'adminShowShopRegistrationForm'])->name('admin.shop.register');
 
     //管理者用店舗登録処理
     Route::post('/admin/shop-register', [ShopController::class, 'adminShopRegistration']);
+    Route::post('/import', [ShopController::class, 'import'])->name('admin.restaurants.import');
+
+    Route::delete('/review/admindelete/{id}', [ShopController::class, 'adminDeleteReview'])->name('review.admin.delete');
 
     Route::get('/scheduler/settings', [ShopController::class, 'showSettings'])->name('scheduler.setting');
     Route::post('/scheduler/settings', [ShopController::class, 'saveSettings'])->name('scheduler.saving');

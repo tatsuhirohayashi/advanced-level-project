@@ -155,6 +155,13 @@
     margin-top: 10px;
 }
 
+.restaurant-content-review {
+    display: inline-block;
+    margin-top: 20px;
+    color: #000;
+    font-size: 18px;
+}
+
 .detail__content-reserve {
     background-color: #3078f2;
     width: 45%;
@@ -335,6 +342,71 @@
     width: 80%;
 }
 
+.detail__review {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.detail__review-top {
+    background-color: #3078f2;
+    width: 50%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #000;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.detail__review-content {
+    width: 50%;
+    border-top: 2px solid #BDBDB7;
+    margin: 20px auto 0;
+}
+
+.detail__review-content-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.detail__review-content-button-edit {
+    margin-right: 15px;
+    color: #000;
+}
+
+.detail__review-content-button-delete {
+    color: #000;
+    border: none;
+    font-size: 16.2px;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.detail__review-content-rate {
+    display: flex;
+}
+
+.star {
+    font-size: 38px;
+    color: #E6E7E8;
+}
+
+.star.active {
+    color: #0000ff;
+}
+
+.detail__review-content-review {
+    font-size: 16px;
+}
+
+.detail__review-content-image img {
+    width: 100%;
+}
+
 /* ここからレスポンシブデザイン */
 
 @media screen and (max-width: 768px) {
@@ -365,5 +437,44 @@
 
     .reserve__content-confirm-reservation-item {
         width: 40%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .detail__comment-input {
+        background-color: #3078f2;
+        width: 80%;
+        padding: 20px 15px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 2px #000;
+        margin: 0 auto;
+    }
+
+    .detail__comment-content {
+        background-color: #3078f2;
+        width: 80%;
+        padding: 20px 15px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 2px #000;
+        margin: 40px auto 0;
+    }
+
+    .detail__review-top {
+        background-color: #3078f2;
+        width: 80%;
+        padding: 10px 15px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 2px #000;
+        margin: 0 auto;
+        color: #ffffff;
+        font-size: 16px;
+        text-align: center;
+        font-weight: normal;
+    }
+
+    .detail__review-content {
+        width: 80%;
+        border-top: 2px solid #BDBDB7;
+        margin: 20px auto 0;
     }
 }

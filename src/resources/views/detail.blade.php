@@ -58,6 +58,11 @@
                 @endif
             </div>
             <div class="restaurant__content-description">{{ $restaurant['description'] }}</div>
+            @auth
+            @if (!$hasReviewed)
+            <a href="{{ route('review.show', $restaurant['id']) }}" class="restaurant-content-review">口コミを投稿する</a>
+            @endif
+            @endauth
         </div>
         <div class="detail__content-reserve">
             @livewire('reservation-form', ['restaurant' => $restaurant])
@@ -101,6 +106,34 @@
             </div>
             @endforeach
         </div>
+    </div>
+    <div class="detail__review">
+        <h2 class="detail__review-top">全ての口コミ情報</h2>
+        @foreach($reviews as $review)
+        <div class="detail__review-content">
+            @if (Auth::check() && $review->user_id === Auth::id())
+            <div class="detail__review-content-button">
+                <a href="{{ route('review.edit', $review['id']) }}" class="detail__review-content-button-edit">口コミを編集</a>
+                <form action="{{ route('review.delete', $review['id']) }}" class="delete-form" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button class="detail__review-content-button-delete" type=submit>口コミを削除</button>
+                </form>
+            </div>
+            @endif
+            <div class="detail__review-content-rate">
+                <div class="detail__review-content-rate">
+                    @for ($i = 1; $i <= 5; $i++)
+                        <span class="star {{ $i <= $review['rate'] ? 'active' : '' }}">★</span>
+                        @endfor
+                </div>
+            </div>
+            <div class="detail__review-content-review">{{ $review['review'] }}</div>
+            <div class="detail__review-content-image">
+                <img src="{{ asset($review['image_url']) }}" alt="">
+            </div>
+        </div>
+        @endforeach
     </div>
 </div>
 

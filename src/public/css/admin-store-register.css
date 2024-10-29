@@ -196,6 +196,34 @@
     cursor: pointer;
 }
 
+.import__content-ttl {
+    margin: 50px auto 0;
+    width: 40%;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 1px #000;
+    border-radius: 5px;
+}
+
+.import__content-header {
+    background-color: #0d33ff;
+    padding: 1px 20px;
+}
+
+.import__content-header-name {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.import__content-body {
+    background-color: #ffffff;
+    padding: 20px 30px;
+}
+
+.import__content-body-input {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .restaurant__content-ttl {
     margin: 50px auto 0;
     width: 40%;
@@ -233,5 +261,79 @@
 }
 
 .restaurant__content-body-owner {
+    font-size: 16px;
+}
+
+/* ここまでが評価機能 */
+
+.review__content-ttl {
+    margin: 50px auto 0;
+    width: 80%;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 1px #000;
+    border-radius: 5px;
+}
+
+.review__content-header {
+    background-color: #0d33ff;
+    padding: 1px 20px;
+    display: flex;
+}
+
+.review__content-header-name {
+    color: #ffffff;
+    font-size: 16px;
+    width: 15%;
+}
+
+.review__content-header-shopname {
+    color: #ffffff;
+    font-size: 16px;
+    width: 15%;
+}
+
+.review__content-header-review {
+    color: #ffffff;
+    font-size: 16px;
+    width: 40%;
+}
+
+.review__content-header-rate {
+    color: #ffffff;
+    font-size: 16px;
+    width: 10%;
+}
+
+.review__content-body {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    display: flex;
+}
+
+.review__content-body-name {
+    font-size: 16px;
+    width: 15%;
+}
+
+.review__content-body-shopname {
+    font-size: 16px;
+    width: 15%;
+}
+
+.review__content-body-review {
+    font-size: 16px;
+    width: 40%;
+}
+
+.review__content-body-rate {
+    font-size: 16px;
+    width: 15%;
+    margin-left: 10px;
+}
+
+.detail__review-content-button-delete {
+    border: none;
+    padding: 10px 10px;
+    background-color: #ff0000;
     font-size: 16px;
 }

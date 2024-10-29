@@ -37,6 +37,18 @@
                     @endif
                 </ul>
             </div>
+            <div class="sort">
+                <form class="sort-form" action="/sort" method="get">
+                    <div class="sort-form__item">
+                        <select class="sort-form__item-select" name="sort" onchange="this.form.submit()">
+                            <option value="">並び替え：評価高／低</option>
+                            <option value="1" {{ request('sort') == '1' ? 'selected' : '' }}>ランダム</option>
+                            <option value="2" {{ request('sort') == '2' ? 'selected' : '' }}>評価が高い順</option>
+                            <option value="3" {{ request('sort') == '3' ? 'selected' : '' }}>評価が低い順</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
             <div class="search">
                 <form class="search-form" action="/search" method="get">
                     <div class="search-form__item">
@@ -75,7 +87,7 @@
                         <p class="restaurant__content-area">#{{ $restaurant['area']['name'] }}</p>
                         @endif
                         @if(isset($restaurant['genre']['name']))
-                        <p class="restaurant__content-genre">#{{ $restaurant['genre']['name'] }}</p>
+                        <p class="restaurant__content-genre">#{{ $restaurant['genre']['name'] }}（{{ $restaurant->review_count }}件の口コミ）</p>
                         @endif
                     </div>
                     <div class="restaurant__content-button">
